@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML 5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplismente aumente e diminuo o tamanho do seu nagador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+    <h1>Reproduzindo audios </h1>
+    <p>Vamos aprender a reproduzir audio em HTML 5</p>
+
+    <audio src="media/bike-rides.mp3" controls autoplay loop></audio>
+    
+<!-- midias aceitas MP3 WAV OGG-->
+<audio preload="metadata" autoplay controls loop>
+    <source src="media/robot-city.mp3" type="audio/mpeg">
+    <source src="media/robot-city.ogg" type="audio/ogg">
+    <source src="media/robot-city.wav" type="audio/wav">
+    <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="media/robot-city.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+ </audio>
+</html>
