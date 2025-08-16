@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+ body{
+            background-color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        h1{
+            color: white;
+            font-size: 2em;
+            text-align: center;
+
+        }
+
+        .tabela-responsiva{
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        table{
+            margin: auto;
+            min-height: 400px;
+            min-width: 400px;
+        }
+
+        td{
+            color: white;
+            border: 2px solid white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        p{
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        img{
+            display: block;
+            margin:  auto;
+            padding: 10px;
+            max-width: 50px;
+            max-height: 50px;
+        }
