@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    background-image: url(desafio15/imagens/fundo-madeira.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+iframe#iphone{
+    height: 700px;
+    width: 300px;
+    border: none;
+    
+    
+}
