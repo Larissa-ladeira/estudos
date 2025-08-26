@@ -4,37 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulárioo de login</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        h1{
+            font-size: 3em;
+        }
+        
+        forms{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
-<style>
-    body{
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: black
-        color: white;
-        text-align: center; 
-    }
-    
-</style>
 <body>
-    <h1>Bem Vindo!</h1>
-    <form>
-        <p>
-            <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" required minlength="3" maxlength="15">
-        </p>
-        <p>
-            <label for="icpf">CPF</label>
-            <input type="text" name="cpf" id="icpf" minlength="11" maxlength="15">
-        </p>
-        <p>
-            <label for="inu">Número</label>
-            <input type="number" mix="11" max="13">
-            
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
-    </form>
+    <h1>Login</h1>
+      <form action="cadastr.php" method="get" autocomplete="off">
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required minlength="3" maxlength="15">
+            </p>
+            <p>
+                <label for="icpf">CPF</label>
+                <input type="text" name="cpf" id="icpf" minlength="11" maxlength="15" required>
+            </p>
+            <p>
+                <label for="inu">Número</label>
+                <input type="number" mix="11" max="13" required>
+        
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+
     
 </body>
 </html>
