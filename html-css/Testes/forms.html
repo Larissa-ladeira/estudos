@@ -15,9 +15,13 @@
             font-size: 3em;
         }
         
-        forms{
+        form{
+        
             background-color: black;
             color: white;
+        }
+        #iemail{
+            text-align: left;
         }
     </style>
 </head>
@@ -25,17 +29,14 @@
     <h1>Login</h1>
       <form action="cadastr.php" method="get" autocomplete="off">
             <p>
-                <label for="inome">Nome</label>
-                <input type="text" name="nome" id="inome" required minlength="3" maxlength="15">
+                <label for="iemail">E-mail</label>
+                <br>
+                <input type="text" name="email" id="iemail" required minlength="15" maxlength="40">
             </p>
             <p>
-                <label for="icpf">CPF</label>
-                <input type="text" name="cpf" id="icpf" minlength="11" maxlength="15" required>
-            </p>
-            <p>
-                <label for="inu">Número</label>
-                <input type="number" mix="11" max="13" required>
-        
+                <label for="isenha">Senha</label>
+                <br>
+                <input type="text" name="senha" id="isenha" minlength="8" maxlength="10" required placeholder="">
             </p>
             <p>
                 <input type="submit" value="Enviar">
