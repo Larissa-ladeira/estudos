@@ -28,20 +28,22 @@
 <body>
     <h1>Login</h1>
       <form action="cadastr.php" method="get" autocomplete="off">
-            <p>
-                <label for="iemail">E-mail</label>
-                <br>
-                <input type="text" name="email" id="iemail" required minlength="15" maxlength="40">
-            </p>
-            <p>
-                <label for="isenha">Senha</label>
-                <br>
-                <input type="text" name="senha" id="isenha" minlength="8" maxlength="10" required placeholder="">
-            </p>
-            <p>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
-            </p>
+            <fieldset>
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <br>
+                    <input type="email" name="email" id="iemail" required autocomplete="email" minlength="15" maxlength="40">
+                </p>
+                <p>
+                    <label for="isenha">Senha</label>
+                    <br>
+                    <input type="text" name="senha" id="isenha" minlength="8" maxlength="10" required placeholder="">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </fieldset>
         </form>
 
     
