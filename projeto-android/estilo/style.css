@@ -65,6 +65,9 @@ header > p{
     text-shadow: 2px 2px0px rgb(0, 0,0 , 0.315);
 
 }
+article{
+    font-family: "Sriracha", cursive
+}
 
 nav{
     background-color: var(--cor5);
