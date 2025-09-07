@@ -35,7 +35,7 @@ menu{
     display: none;
 }
 
-menu > u {
+menu > ul {
     list-style-type: none;
 }
 
@@ -54,7 +54,8 @@ menu > ul > li > a:hover{
 }
 
 main{
-    width: 90vh;
+    width: 90%; /*Responsividade em telas pequenas*/
+    max-width: 900px;
     background-color: white;
     margin: auto;
     margin-top: 10px;
