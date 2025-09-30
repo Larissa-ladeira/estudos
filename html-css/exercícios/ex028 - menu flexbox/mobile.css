@@ -9,6 +9,25 @@ header > h1{
     flex-basis: 50px;
 }
 
+nav{
+    display: none;
+}
+
+span#menu {
+    background-color: black;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 3px;
+    cursor: pointer;
+}
+
+span#menu:hover {
+    background-color: white;
+    color: black;
+
+}
+
 header > nav > a{
     width: 90vw;
 }
