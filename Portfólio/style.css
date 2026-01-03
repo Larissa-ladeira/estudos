@@ -1,0 +1,622 @@
+@charset "UTF-8";
+
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;     /* Faz o elemento ficar fixo na tela */
+    top: 0;              /* Cola no topo exato */
+    left: 0;             /* Garante que comece do canto esquerdo */
+    width: 100vw;         /* Ocupa toda a largura da tela */
+    z-index: 1000;       /* Garante que o menu fique NA FRENTE de todos os outros elementos */
+    background-color: #0f0c13; /* Use a mesma cor de fundo do seu body para não ficar transparente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para destacar do conteúdo */
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #0f0c13; /* Fundo preto arroxeado */
+    color: white;
+    padding-top: 80px; /* Ajuste esse valor de acordo com a altura do seu menu */
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
+
+/* Header e Menu */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a855f7; /* Roxo principal */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #a855f7;
+}
+
+/* Seção Principal (Heroi) */
+
+.heroi{
+    min-height: 100vh; /* Mantém 100vh apenas na Home para centralizar tudo */
+    background: radial-gradient(circle at top, #1c142b, #0b0713);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 60px;
+
+}
+.heroi-projetos {
+    width: 100%; /* Use 100% em vez de 100vw */
+    max-width: 100%;
+    overflow-x: hidden;
+
+    background: radial-gradient(circle at top, #1c142b, #0b0713);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 100px
+}
+
+.contender h1 {
+    font-size: 50px;
+}
+
+.contender span {
+    color: #a855f7;
+}
+
+.contender p {
+    margin: 20px 0;
+    max-width: 500px;
+    color: #ccc;
+}
+
+/* Ícones Sociais */
+.medias a {
+    font-size: 25px;
+    color: white;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.medias a:hover {
+    color: #a855f7;
+    transform: translateY(-5px);
+}
+
+/* Botão Contatos */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: 2px solid #a855f7;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #a855f7;
+    box-shadow: 0 0 20px #a855f7;
+}
+
+/* Círculo da Imagem */
+.image .circle {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, #a855f7, #6b21a8);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(168, 85, 247, 0.5);
+    
+    display: flex; /* Alinha a imagem no centro */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Corta a imagem no formato do círculo */
+    border: 4px solid #a855f7; /* Opcional: uma borda para destacar */
+}
+
+/* Estilização da Imagem dentro do círculo */
+.image .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+    border-radius: 50%;
+}
+footer {
+    text-align: center;
+    font-size: 15px;
+    
+}
+/* --- SEÇÃO DE SKILLS --- */
+
+
+
+#skills {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o título e o container das barras */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#skills h2 {
+    font-size: 2rem;
+    color: #a855f7; /* Roxo principal */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+#skills h2 i {
+    color: #a855f7;
+}
+
+/* Container que segura todos os itens */
+#skill-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px 60px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Cada item individual (Texto + Barra) */
+.item {
+    width: 100%;
+}
+
+/* Área do Texto (Nome da Skill e Porcentagem) */
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.nome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.nome i {
+    color: #a855f7; /* Ícones em roxo */
+    font-size: 1.1rem;
+}
+
+.porcent {
+    color: #a855f7;
+}
+
+/* Fundo da Barra */
+.barra {
+    width: 100%;
+    height: 12px;
+    background-color: #2a2435; /* Roxo bem escuro para o fundo */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* O preenchimento roxo da barra */
+.progresso {
+    height: 100%;
+    background: linear-gradient(90deg, #a855f7, #6b21a8); /* Gradiente roxo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4); /* Efeito de brilho */
+    transition: width 1.5s ease-in-out;
+}
+
+/* --- ESTILIZAÇÃO DA SEÇÃO DE FORMAÇÃO --- */
+
+#formacao {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#formacao h2 {
+    font-size: 2rem;
+    color: #a855f7; /* Roxo principal */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Container que empilha os cursos */
+#formacao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* O "Card" de cada curso */
+.curso {
+    background-color: #1a1625; /* Roxo bem escuro para o fundo do card */
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 10px solid #3c344d; /* Borda lateral discreta inicial */
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Efeito ao passar o mouse: a borda "acende" em roxo neon */
+.curso:hover {
+    border-left: 10px solid #a855f7;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+    transform: translateX(10px); /* Leve movimento para a direita */
+}
+
+/* Estilo do Ano/Período */
+.periodo {
+    font-size: 0.9rem;
+    color: #a855f7;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Estilo do Nome da Instituição */
+.instituicao {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-transform: capitalize; /* Garante boa formatação de nomes */
+}
+
+/* Estilo do Nome do Curso/Titulação */
+.titulacao {
+    font-size: 1rem;
+    color: #b3b3b3; /* Cinza claro para descrição */
+}
+
+/* Ajuste para o ícone do título */
+#formacao h2 i {
+    font-size: 2rem;
+}
+
+/* --- SEÇÃO DE PROJETOS --- */
+
+#projetos {
+    background-color: #0f0c13;
+    width: 100%;
+    position: relative;
+}
+
+
+#projeto-container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 900px; /* Impede que os cards fiquem largos demais */
+    margin: 0 auto;
+}
+
+#formacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente os cards de curso */
+    padding: 40px 10%;
+}
+
+#projetos h2 {
+    font-size: 2rem;
+    color: #a855f7;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+
+    
+}
+
+#projeto-wrapper {
+    display: flex;                     /* ATIVA FLEX */
+    justify-content: center;           /* CENTRALIZA O CONTAINER */
+    align-items: center;               /* ALINHA A SETA AO MEIO */
+    gap: 20px;                         /* ESPAÇO ENTRE CARD E SETA */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;                    /* CENTRALIZA NA PÁGINA */
+}
+
+.seta-link i {
+    font-size: 2.5rem;
+    color: #a855f7;
+    cursor: pointer;
+    padding: 20px;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: 50%;
+    width: 80px;  
+    height: 80px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;  /* Define um tamanho fixo para garantir o círculo perfeito */
+    height: 80px;
+}
+
+/* Efeito de Hover unificado */
+.seta-link:hover i {
+    background: #a855f7;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.seta-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    text-decoration: none;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.fa-arrow-right {
+    font-size: 2.5rem;
+    color: #a855f7;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: 50%;
+    transition: 0.3s;
+
+    
+}
+
+.seta-link:hover .fa-arrow-right {
+    transform: scale(1.1) translateX(10px);
+}
+
+.seta-link:hover .fa-arrow-left {
+    transform: scale(1.1) translateX(-10px);
+}
+
+/* Card Individual Estilo Horizontal */
+.projeto {
+
+    display: flex;                 /* 🔥 ESSENCIAL */
+    align-items: center;           /* Centraliza verticalmente */
+    justify-content: center;       /* Centraliza o conteúdo */
+    gap: 30px;
+
+    background-color: #1a1625;
+    border-radius: 12px;
+    border-left: 10px solid #a855f7;
+    border-top: 10px solid #a855f7; /* Borda lateral igual à imagem de referência */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    padding: 20px;
+}
+
+.projeto:has(details[open]) .foto {
+    width: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 3. Fazer o texto ocupar todo o espaço quando a imagem sumir */
+.projeto:has(details[open]) .projeto-info {
+    flex: 1;
+    padding: 40px 30px; /* Aumenta o respiro interno */
+    transition: all 0.5s ease-in-out;
+}
+
+/* 4. Estilo padrão da foto (fechada) */
+.foto {
+    width: 40%;
+    
+    height: auto;
+    object-fit: cover;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    margin: 0;              /* 🔥 REMOVE A BORDA BRANCA */
+    display: block;
+}
+
+
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.2);
+}
+
+/* Parte de Texto do Card */
+.projeto-info {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projeto-info .periodo {
+    font-size: 1.5rem;
+    color: #a855f7;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.projeto-info .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.projeto-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+
+/* Estilização do 'Saiba mais' */
+.descricao summary {
+    cursor: pointer;
+    color: #a855f7;
+    font-weight: bold;
+    margin-top: 15px;
+    list-style: none; /* Remove a setinha padrão se desejar */
+}
+
+.descricao summary::before {
+    content: "▶ ";
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVIDADE UNIFICADA --- */
+@media (max-width: 768px) {
+    
+    /* Ajustes Gerais de Texto e Hero */
+    .heroi {
+        flex-direction: column-reverse; 
+        text-align: center;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .contender h1 {
+        font-size: 35px; /* Diminui o título principal no mobile */
+    }
+
+    .contender p {
+        margin: 20px auto;
+        font-size: 14px;
+    }
+
+    .image .circle {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+
+    /* Ajustes da Seção de SKILLS (Grades) */
+    #skill-container {
+        grid-template-columns: 1fr; /* Muda de 2 colunas para 1 no mobile */
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    /* Ajustes da Seção de FORMAÇÃO */
+    #formacao {
+        padding: 40px 5%;
+    }
+    
+    .curso {
+        padding: 15px;
+    }
+
+    .curso:hover {
+        transform: none; /* Remove movimento lateral para evitar quebra de tela no mobile */
+    }
+    
+    .instituicao {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustes da Seção de PROJETOS */
+    #projeto-wrapper {
+        flex-direction: column;
+    }
+
+    #projeto-container {
+        width: 95%; /* Dá uma margem pequena nas laterais */
+        margin: 0 auto;
+    }
+
+    .seta-link {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .projeto {
+        width: 100%;
+        overflow: hidden;
+        flex-direction: column; /* Imagem em cima, texto embaixo */
+        gap: 0;
+    }
+
+    .foto {
+        width: 100%;
+        height: 200px;
+        height: auto;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0; /* Arredonda apenas o topo */
+        display: block;
+    }
+
+    .projeto-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .projeto-info .titulo {
+        justify-content: center;
+    }
+
+    /* Ajuste do Menu Header */
+    header nav {
+        padding: 15px 5%;
+        flex-direction: column; /* Opcional: empilha logo e menu se ficarem apertados */
+        gap: 10px;
+    }
+
+    .menu a {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+}
+
